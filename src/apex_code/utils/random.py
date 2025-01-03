@@ -102,3 +102,22 @@ class RandomNumberGenerator:
         z1 = math.sqrt(-2*math.log2(x)) * math.cos(2*PI*y)
 
         return mean + (sigma * z1)
+
+def shuffle(a):
+    """
+    Modifies the list a by randomly shuffles elements in the list.
+
+
+    :param a: list to be randomly shuffled.
+    :return: randomly shuffled list.
+    """
+
+    n = len(a)
+    rng = RandomNumberGenerator()
+    for i in range(n):
+        random_index = rng.uniform_integers(low=0, high=n-1)
+        temp = a[i]
+        a[i] = a[random_index]
+        a[random_index] = temp
+
+    return a

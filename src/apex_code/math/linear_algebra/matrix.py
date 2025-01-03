@@ -1,3 +1,6 @@
+from apex_code.utils.random import RandomNumberGenerator
+
+
 class Matrix:
     """
     Simple matrix class
@@ -124,6 +127,23 @@ class Matrix:
                 new_matrix[row][column] = self.matrix[row][column] * other[row][column]
 
         return new_matrix
+
+    def shuffle(self):
+        """
+        Randomly shuffles all elements in the current matrix.
+        """
+
+        rng = RandomNumberGenerator()
+
+        for row in range(self.rows):
+            for column in range(self.columns):
+                random_column_index = rng.uniform_integers(low=0, high=self.columns-1)
+                random_row_index = rng.uniform_integers(low=0, high=self.rows-1)
+
+                temp = self.matrix[row][column]
+                self.matrix[row][column] = self.matrix[random_row_index][random_column_index]
+                self.matrix[random_row_index][random_column_index] = temp
+
 
     def __matrix_x_matrix(self, other):
         """
