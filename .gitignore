@@ -1,6 +1,9 @@
 # I use this file name to test the code in this package before publishing it.
 _apex_code_main.py
 
+# pycharm config files
+.idea/
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
