@@ -99,13 +99,13 @@ class RandomNumberGenerator:
 
         x = self.uniform()
         y = self.uniform()
-        z1 = math.sqrt(-2*math.log2(x)) * math.cos(2*PI*y)
+        z1 = math.sqrt(-2*math.log(x)) * math.cos(2*PI*y)
 
         return mean + (sigma * z1)
 
 def shuffle(a):
     """
-    Modifies the list a by randomly shuffles elements in the list.
+    Modifies the list passed in by randomly shuffling elements in the list.
 
 
     :param a: list to be randomly shuffled.
