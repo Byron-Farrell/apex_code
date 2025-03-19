@@ -21,7 +21,7 @@ python3 -m twine upload dist/*
 
 ### Install
 ```bash
-pip install apex_matrix
+pip install apex_code
 ```
 
 ### Tests
@@ -32,7 +32,7 @@ python3 -m unittest discover -s tests
 
 ### Usage
 ```python
-from apex_matrix.Matrix import Matrix
+from apex_code.math.linear_algebra.Matrix import Matrix
 
 # Create matrix object
 my_matrix = Matrix([1,2,3],[4,5,6])
